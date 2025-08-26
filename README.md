@@ -14,6 +14,17 @@ pip install -e .
 
 ## Brug
 
+### GUI App (Anbefalet)
+```bash
+# Byg og installer GUI app til Desktop
+./build_app.sh
+./install_to_desktop.sh
+
+# Eller kør GUI direkte
+python3 run_gui.py
+```
+
+### Command Line
 ```bash
 # Opret et nyt projekt
 python main.py <projekt_navn> [type]
@@ -34,6 +45,16 @@ python main.py my-fullstack-app fullstack
 
 ## Funktioner
 
+### GUI App
+- 🖥️ **Brugervenlig interface** med tkinter
+- 📝 **Projektbeskrivelse** input for bedre AI kontekst
+- 🎯 **Visuel projekttype** valg (dropdown)
+- 📁 **Browse funktion** til projektsti
+- ⚙️ **Avancerede options** (dependencies, Git, force)
+- 📊 **Progress tracking** med status updates
+- 🎨 **Moderne design** med temaer
+
+### Core Features
 - ✅ Automatisk projektstruktur
 - ✅ AI assistant konfiguration (.cursorrules, .claudeignore)
 - ✅ Virtual environment setup
