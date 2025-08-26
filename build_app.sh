@@ -6,7 +6,7 @@ echo "🚀 Building Project Creator macOS app..."
 
 # Install dependencies
 echo "📦 Installing dependencies..."
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 # Create icon
 echo "🎨 Creating app icon..."
@@ -14,7 +14,7 @@ python3 create_icon.py
 
 # Build the app
 echo "🔨 Building app with PyInstaller..."
-pyinstaller ProjectCreator.spec
+python3 -m PyInstaller ProjectCreator.spec
 
 # Check if build was successful
 if [ -d "dist/ProjectCreator.app" ]; then
