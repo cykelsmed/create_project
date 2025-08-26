@@ -12,16 +12,37 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
+### macOS Desktop App
+
+#### Light Version (Anbefalet)
+- **Størrelse**: ~88MB
+- **Dependencies**: Minimal (ingen YAML, ingen Click)
+- **Funktioner**: Alle core funktioner
+- **Build**: `./build_light_app.sh`
+
+#### Full Version
+- **Størrelse**: ~103MB  
+- **Dependencies**: Komplet (YAML, Click, etc.)
+- **Funktioner**: Alle funktioner inklusive CLI
+- **Build**: `./build_app.sh`
+
+Begge versioner giver samme GUI oplevelse for projekt oprettelse.
+
 ## Brug
 
 ### GUI App (Anbefalet)
 ```bash
-# Byg og installer GUI app til Desktop
+# Byg og installer light GUI app til Desktop (anbefalet)
+./build_light_app.sh
+cp -r dist/ProjectCreatorLight.app ~/Desktop/
+
+# Eller byg full version
 ./build_app.sh
 ./install_to_desktop.sh
 
 # Eller kør GUI direkte
-python3 run_gui.py
+python3 run_gui_light.py  # Light version
+python3 run_gui.py        # Full version
 ```
 
 ### Command Line
